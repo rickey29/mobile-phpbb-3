@@ -1,0 +1,28 @@
+<!-- IF PREVIOUS_PAGE or NEXT_PAGE -->
+</div>
+<div data-role="footer" data-id="foo1" data-position="fixed">
+<div data-role="navbar">
+<ul>
+<!-- IF PREVIOUS_PAGE -->
+<!-- IF FIRST_PAGE -->
+<li>
+<a href="{FIRST_PAGE}" rel="external" class="ui-btn-active">{L_FIRST}</a>
+</li>
+<!-- ENDIF -->
+<li>
+<a href="{PREVIOUS_PAGE}" rel="external" class="ui-btn-active">{L_PREVIOUS}</a>
+</li>
+<!-- ENDIF -->
+<!-- IF NEXT_PAGE -->
+<li>
+<a href="{NEXT_PAGE}" rel="external" class="ui-btn-active">{L_NEXT}</a>
+</li>
+<!-- IF LAST_PAGE -->
+<li>
+<a href="{LAST_PAGE}" rel="external" class="ui-btn-active">{L_LAST}</a>
+</li>
+<!-- ENDIF -->
+<!-- ENDIF -->
+</ul>
+</div>
+<!-- ENDIF -->

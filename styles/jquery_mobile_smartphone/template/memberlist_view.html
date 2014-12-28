@@ -1,0 +1,130 @@
+<!-- INCLUDE overall_header.html -->
+</div>
+<hr />
+<div>
+{PAGE_TITLE}
+<br />
+{L_USERNAME}{L_COLON} {USERNAME}
+<!-- IF RANK_TITLE -->
+<br />
+{L_RANK}{L_COLON} {RANK_TITLE}
+<!-- ENDIF -->
+<!-- IF S_USER_INACTIVE -->
+<br />
+{L_USER_IS_INACTIVE}{L_COLON} {USER_INACTIVE_REASON}
+<!-- ENDIF -->
+<!-- IF LOCATION -->
+<br />
+{L_LOCATION}{L_COLON} {LOCATION}
+<!-- ENDIF -->
+<!-- IF AGE !== '' -->
+<br />
+{L_AGE}{L_COLON} {AGE}
+<!-- ENDIF -->
+<!-- IF OCCUPATION -->
+<br />
+{L_OCCUPATION}{L_COLON} {OCCUPATION}
+<!-- ENDIF -->
+<!-- IF INTERESTS -->
+<br />
+{L_INTERESTS}{L_COLON} {INTERESTS}
+<!-- ENDIF -->
+</div>
+<hr />
+<div>
+{L_CONTACT_USER} {USERNAME}
+<!-- IF U_EMAIL -->
+<br />
+<a href="{U_EMAIL}">{L_EMAIL_ADDRESS}{L_COLON} {L_SEND_EMAIL_USER} {USERNAME}</a>
+<!-- ENDIF -->
+<!-- IF U_WWW -->
+<br />
+<a href="{U_WWW}">{L_WEBSITE}{L_COLON} {U_WWW}</a>
+<!-- ENDIF -->
+<!-- IF U_PM -->
+<br />
+<a href="{U_PM}">{L_PM}{L_COLON} {L_SEND_PRIVATE_MESSAGE}</a>
+<!-- ENDIF -->
+<!-- IF U_MSN or USER_MSN -->
+<br />
+<!-- IF U_MSN -->
+<a href="{U_MSN}">{L_MSNM}{L_COLON} {L_SEND_MSNM_MESSAGE}</a>
+<!-- ELSE -->
+{L_MSNM}{L_COLON} {USER_MSN}
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- IF U_YIM or USER_YIM -->
+<br />
+<!-- IF U_YIM -->
+<a href="{U_YIM}">{L_YIM}{L_COLON} {L_SEND_YIM_MESSAGE}</a>
+<!-- ELSE -->
+{L_YIM}{L_COLON} {USER_YIM}
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- IF U_AIM or USER_AIM -->
+<br />
+<!-- IF U_AIM -->
+<a href="{U_AIM}">{L_AIM}{L_COLON} {L_SEND_AIM_MESSAGE}</a>
+<!-- ELSE -->
+{L_AIM}{L_COLON} {USER_AIM}
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- IF U_ICQ or USER_ICQ -->
+<br />
+<!-- IF U_ICQ -->
+<a href="{U_ICQ}">{L_ICQ}{L_COLON} {L_SEND_ICQ_MESSAGE}</a>
+<!-- ELSE -->
+{L_ICQ}{L_COLON} {USER_ICQ}
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- IF U_JABBER and S_JABBER_ENABLED -->
+<br />
+<a href="{U_JABBER}">{L_JABBER}{L_COLON} {L_SEND_JABBER_MESSAGE}</a>
+<!-- ELSEIF USER_JABBER -->
+<br />
+{L_JABBER}{L_COLON} {USER_JABBER}
+<!-- ENDIF -->
+</div>
+<hr />
+<div>
+{L_USER_FORUM}
+<br />
+{L_JOINED}{L_COLON} {JOINED}
+<br />
+{L_VISITED}{L_COLON} {VISITED}
+<!-- IF S_WARNINGS -->
+<br />
+{L_WARNINGS}{L_COLON} {WARNINGS}
+<!-- ENDIF -->
+<br />
+{L_TOTAL_POSTS}{L_COLON} {POSTS}
+<!-- IF POSTS_PCT -->
+<br />
+( {POSTS_PCT} / {POSTS_DAY} )
+<!-- ENDIF -->
+<!-- IF POSTS_IN_QUEUE and U_MCP_QUEUE -->
+<br />
+( {L_POSTS_IN_QUEUE} )
+<!-- ELSEIF POSTS_IN_QUEUE -->
+<br />
+( {L_POSTS_IN_QUEUE} )
+<!-- ENDIF -->
+<!-- IF S_SHOW_ACTIVITY and POSTS -->
+<br />
+<!-- IF ACTIVE_FORUM != '' -->
+<a href="{U_ACTIVE_FORUM}">{L_ACTIVE_IN_FORUM}{L_COLON} {ACTIVE_FORUM}</a>
+<br />
+( {ACTIVE_FORUM_POSTS} / {ACTIVE_FORUM_PCT} )
+<!-- ELSE -->
+{L_ACTIVE_IN_FORUM}{L_COLON} - 
+<!-- ENDIF -->
+<br />
+<!-- IF ACTIVE_TOPIC != '' -->
+<a href="{U_ACTIVE_TOPIC}">{L_ACTIVE_IN_TOPIC}{L_COLON} {ACTIVE_TOPIC}</a>
+<br />
+( {ACTIVE_TOPIC_POSTS} / {ACTIVE_TOPIC_PCT} )
+<!-- ELSE -->
+{L_ACTIVE_IN_TOPIC}{L_COLON} - 
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- INCLUDE overall_footer.html -->

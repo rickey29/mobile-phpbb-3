@@ -1,0 +1,34 @@
+</div>
+<hr />
+<div>
+<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
+<!-- IF S_DISPLAY_PM -->
+<a href="{U_PRIVATEMSGS}">{PRIVATE_MESSAGE_INFO}</a>
+<br />
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED and not ( S_SHOW_COPPA or S_REGISTRATION ) -->
+<a href="{U_REGISTER}">{L_REGISTER}</a>
+<br />
+<!-- ENDIF -->
+<!-- IF not S_IS_BOT -->
+<a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a>
+<br />
+<!-- ENDIF -->
+<!-- IF S_DISPLAY_SEARCH or ( S_USER_LOGGED_IN and not S_IS_BOT ) -->
+<!-- IF S_DISPLAY_SEARCH -->
+<a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a>
+<br />
+<!-- IF S_LOAD_UNREADS -->
+<a href="{U_SEARCH_UNREAD}">{L_SEARCH_UNREAD}</a>
+<br />
+<!-- ENDIF -->
+<!-- IF S_USER_LOGGED_IN -->
+<a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a>
+<br />
+<!-- ENDIF -->
+<a href="{U_SEARCH_ACTIVE_TOPICS}">{L_SEARCH_ACTIVE_TOPICS}</a>
+<br />
+<!-- ENDIF -->
+<!-- ENDIF -->
+<a href="{U_SWITCH_TO_DESKTOP_STYLE}">{L_SWITCH_TO_DESKTOP_STYLE}</a>
