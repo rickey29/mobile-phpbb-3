@@ -23,7 +23,7 @@ It only provides essential mobile related functions, it does not support all php
 		<installation>
 			<level>intermediate</level>
 			<time>900</time>
-			<target-version>3.0.13</target-version>
+			<target-version>3.0.13-PL1</target-version>
 		</installation>
 	</header>
 	<action-group>

@@ -2,7 +2,7 @@
 /*
 	project: Mobile phpBB 3 (MphpBB3)
 	file:    $phpbb_root_path/mobile/index.php
-	version: 5.3.0
+	version: 5.4.0
 	author:  Rickey Gu
 	web:     http://flexplat.com
 	email:   rickey29@gmail.com
@@ -25,14 +25,11 @@ if ( $style )
 }
 
 
-define('IN_MPHPBB3', true);
-
 // detection library
 require($phpbb_root_path . 'mobile/lib/detection.' . $phpEx);
 
 
 global $user;
-
 
 $m_data = array();
 $m_data['user_agent'] = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
@@ -88,10 +85,12 @@ if ( !empty($m_response['echo_page']) && $m_response['echo_page'] == 'mobile' )
 	$row = $db->sql_fetchrow($result);
 	$db->sql_freeresult($result);
 
-	$style = $row['style_id'];
+	if ( !empty($row) )
+	{
+		$style = $row['style_id'];
 
-
-	// library
-	include($phpbb_root_path . 'mobile/lib/lib.' . $phpEx);
+		// library
+		include($phpbb_root_path . 'mobile/lib/lib.' . $phpEx);
+	}
 }
 ?>
