@@ -31,6 +31,30 @@
 <label for="password_confirm">{L_CONFIRM_PASSWORD}{L_COLON}</label>
 <br />
 <input type="password" name="password_confirm" id="password_confirm" size="25" value="" placeholder="{L_CONFIRM_PASSWORD}" />
+<br />
+<label for="lang">{L_LANGUAGE}{L_COLON}</label>
+<br />
+<select name="lang" id="lang">
+{S_LANG_OPTIONS}
+</select>
+<br />
+<label for="tz">{L_TIMEZONE}{L_COLON}</label>
+<br />
+<select name="tz" id="tz">
+{S_TZ_OPTIONS}
+</select>
+<!-- IF .profile_fields -->
+<!-- BEGIN profile_fields -->
+<br />
+<label<!-- IF profile_fields.FIELD_ID --> for="{profile_fields.FIELD_ID}"<!-- ENDIF -->>
+{profile_fields.LANG_NAME}{L_COLON}<!-- IF profile_fields.S_REQUIRED --> *<!-- ENDIF -->
+<!-- IF profile_fields.LANG_EXPLAIN --><br />{profile_fields.LANG_EXPLAIN}<!-- ENDIF -->
+<!-- IF profile_fields.ERROR --><br />{profile_fields.ERROR}<!-- ENDIF -->
+</label>
+<br />
+{profile_fields.FIELD}
+<!-- END profile_fields -->
+<!-- ENDIF -->
 <!-- IF CAPTCHA_TEMPLATE -->
 <!-- DEFINE $CAPTCHA_TAB_INDEX = 8 -->
 <!-- INCLUDE {CAPTCHA_TEMPLATE} -->

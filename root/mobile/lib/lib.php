@@ -2,7 +2,7 @@
 /*
 	project: Mobile phpBB 3 (MphpBB3)
 	file:    $phpbb_root_path/mobile/lib/lib.php
-	version: 5.4.0
+	version: 5.5.0
 	author:  Rickey Gu
 	web:     http://flexplat.com
 	email:   rickey29@gmail.com

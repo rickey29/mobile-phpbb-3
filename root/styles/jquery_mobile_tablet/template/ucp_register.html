@@ -28,6 +28,30 @@
 <label for="password_confirm">{L_CONFIRM_PASSWORD}{L_COLON}</label>
 <input type="password" name="password_confirm" id="password_confirm" size="25" value="" placeholder="{L_CONFIRM_PASSWORD}" />
 </div>
+<div data-role="fieldcontain">
+<label for="lang" class="select">{L_LANGUAGE}{L_COLON}</label>
+<select name="lang" id="lang" data-native-menu="false">
+{S_LANG_OPTIONS}
+</select>
+</div>
+<div data-role="fieldcontain">
+<label for="tz" class="select">{L_TIMEZONE}{L_COLON}</label>
+<select name="tz" id="tz" data-native-menu="false">
+{S_TZ_OPTIONS}
+</select>
+</div>
+<!-- IF .profile_fields -->
+<!-- BEGIN profile_fields -->
+<div data-role="fieldcontain">
+<label<!-- IF profile_fields.FIELD_ID --> for="{profile_fields.FIELD_ID}"<!-- ENDIF -->>
+{profile_fields.LANG_NAME}{L_COLON}<!-- IF profile_fields.S_REQUIRED --> *<!-- ENDIF -->
+<!-- IF profile_fields.LANG_EXPLAIN --><br />{profile_fields.LANG_EXPLAIN}<!-- ENDIF -->
+<!-- IF profile_fields.ERROR --><br />{profile_fields.ERROR}<!-- ENDIF -->
+</label>
+{profile_fields.FIELD}
+</div>
+<!-- END profile_fields -->
+<!-- ENDIF -->
 <!-- IF CAPTCHA_TEMPLATE -->
 <!-- DEFINE $CAPTCHA_TAB_INDEX = 8 -->
 <!-- INCLUDE {CAPTCHA_TEMPLATE} -->

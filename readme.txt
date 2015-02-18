@@ -1,7 +1,7 @@
 Mobile phpBB 3 Readme
 ################
-version: 5.4.0
-last update: Fri., Feb. 13, 2015
+version: 5.5.0
+last update: Wed., Feb. 18, 2015
 
 
 Description
@@ -59,6 +59,9 @@ Since my often have to update this section after I release the package, so I pro
 
 History
 ++++++++++++++++
+version 5.5.0 (Wed., Feb. 18, 2015)
+-- new feature: Custom profile fields
+
 version 5.4.0 (Fri., Feb. 13, 2015)
 -- bug fix: Imageset misses “en” localisation
 
