@@ -2,7 +2,7 @@
 /*
 	project: Mobile phpBB 3 (MphpBB3)
 	file:    $phpbb_root_path/mobile/lib/lib.php
-	version: 5.5.0
+	version: 5.6.0
 	author:  Rickey Gu
 	web:     http://flexplat.com
 	email:   rickey29@gmail.com
@@ -74,10 +74,19 @@ function m_update_msg_text($msg_text)
 	}
 }
 
-function m_update_post_row(&$post_row)
+function m_update_postrow(&$postrow)
 {
-	$pattern = '#<a[^>]*>\s*(.*)\s*</a>#isU';
+	$pattern = '#<a.*\s+href\s*=\s*("|\')([^\\1]*)\\1.*>\s*(.*)\s*</a>#isU';
+	if ( defined('MPHPBB3') && ( MPHPBB3 == 'jQuery-Mobile Smartphone' || MPHPBB3 == 'jQuery-Mobile Tablet' ) )
+	{
+		$postrow['MESSAGE'] = preg_replace($pattern, '<a href="$2" rel="external">$3</a>', $postrow['MESSAGE']);
+	}
+	else
+	{
+		$postrow['MESSAGE'] = preg_replace($pattern, '<a href="$2">$3</a>', $postrow['MESSAGE']);
+	}
 
-	$post_row['L_IGNORE_POST'] = preg_replace($pattern, '$1', $post_row['L_IGNORE_POST']);
+	$pattern = '#<a[^>]*>\s*(.*)\s*</a>#isU';
+	$postrow['L_IGNORE_POST'] = preg_replace($pattern, '$1', $postrow['L_IGNORE_POST']);
 }
 ?>

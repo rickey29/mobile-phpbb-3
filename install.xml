@@ -19,7 +19,7 @@ It only provides essential mobile related functions, it does not support all php
 				<email><![CDATA[rickey29@gmail.com]]></email>
 			</author>
 		</author-group>
-		<mod-version>5.3.0</mod-version>
+		<mod-version>5.6.0</mod-version>
 		<installation>
 			<level>intermediate</level>
 			<time>900</time>
@@ -39,7 +39,7 @@ It only provides essential mobile related functions, it does not support all php
 	);]]></find>
 				<action type="after-add"><![CDATA[	if ( defined('MPHPBB3') )
 	{
-		m_update_post_row($post_row);
+		m_update_postrow($postrow);
 	}]]></action>
 			</edit>
 		</open>
