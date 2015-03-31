@@ -2,7 +2,7 @@
 /*
 	project: Mobile phpBB 3 (MphpBB3)
 	file:    $phpbb_root_path/mobile/index.php
-	version: 5.6.0
+	version: 5.7.0
 	author:  Rickey Gu
 	web:     http://flexplat.com
 	email:   rickey29@gmail.com
@@ -14,7 +14,7 @@ if ( !defined('IN_PHPBB') )
 }
 
 
-if ( $this->data['is_bot'] || defined('ADMIN_START') || defined('IN_ADMIN') )
+if ( defined('ADMIN_START') || defined('IN_ADMIN') )
 {
 	return;
 }
