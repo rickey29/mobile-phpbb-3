@@ -1,7 +1,7 @@
 Mobile phpBB 3 Readme
 ################
-version: 5.7.0
-last update: Tue., Mar. 31, 2015
+version: 5.7.1
+last update: Wed., Apr. 01, 2015
 
 
 Description
@@ -59,6 +59,9 @@ Since my often have to update this section after I release the package, so I pro
 
 History
 ++++++++++++++++
+version 5.7.1 (Wed., Apr. 01, 2015)
+-- bug fix: viewtopic_body Menu Option not working
+
 version 5.7.0 (Tue., Mar. 31, 2015)
 -- new feature: support BBCode
 
